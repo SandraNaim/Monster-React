@@ -10,6 +10,7 @@ import { SearchBox } from './components/search-box/search-box.component';
       this.state = {
         monsters: [],
         searchText: ''
+        // dateValue: 20
       };
     }
 
@@ -22,6 +23,14 @@ import { SearchBox } from './components/search-box/search-box.component';
   handleChange = (e) => {
     this.setState({ searchText: e.target.value })
   }
+  // Asynchronous setState
+  // handleClick = () => {
+  //   this.setState((prevState, prevProps) => {
+  //     return {dateValue: prevState.dateValue + 1}
+  //   },
+  //     () => console.log(this.state.dateValue)
+  //   )
+  // }
 
     render(){
       const { monsters, searchText } = this.state;
@@ -36,6 +45,11 @@ import { SearchBox } from './components/search-box/search-box.component';
             handleChange={ this.handleChange }
           />
           <CardList monsters={filteredMonsters} />
+
+          {/* Testing the Asynchronous setState */}
+          {/* <a>{this.state.dateValue}</a>
+          <button onClick={this.handleClick}>Update value</button> */}
+
         </div>
       );
     }
