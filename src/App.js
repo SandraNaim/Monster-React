@@ -30,6 +30,7 @@ import { SearchBox } from './components/search-box/search-box.component';
       )
       return (
         <div className="App">
+          <h1>Monster Rolodex</h1>
           <SearchBox 
             placeholder="Search Monster"
             handleChange={ this.handleChange }
